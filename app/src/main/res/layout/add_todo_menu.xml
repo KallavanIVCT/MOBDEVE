@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctlBackground1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dlsugrey">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ctlBackground2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/dlsugrey"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/tvAddSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            android:text="Subject"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAddTitle" />
+
+        <EditText
+            android:id="@+id/etAddSubject"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Title..."
+            android:inputType="text"
+            android:text=""
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddSubject" />
+
+        <TextView
+            android:id="@+id/tvAddTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etAddTitle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Title..."
+            android:inputType="text"
+            android:text=""
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddTitle" />
+
+        <TextView
+            android:id="@+id/tvAddSType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            android:text="Subject Type"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAddSubject" />
+
+        <RadioGroup
+            android:id="@+id/rbAddSubjectType"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddSType">
+
+            <RadioButton
+                android:id="@+id/rbAddLC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="#00FFFFFF"
+                android:buttonTint="@color/dlsugreen"
+                android:text="LC"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+            <RadioButton
+                android:id="@+id/rbAddMajor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:buttonTint="@color/dlsugreen"
+                android:text="Major"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+            <RadioButton
+                android:id="@+id/rbAddGE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:buttonTint="@color/dlsugreen"
+                android:text="GE"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvAddDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            android:text="Description"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbAddSubjectType" />
+
+        <EditText
+            android:id="@+id/etAddDescription"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Description..."
+            android:inputType="text"
+            android:text=""
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddDescription" />
+
+        <TextView
+            android:id="@+id/tvAddDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            android:text="Due Date"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAddDescription" />
+
+        <Button
+            android:id="@+id/btnAddDueDate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Due Day"
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddDue" />
+
+        <Button
+            android:id="@+id/btnAddDueTime"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Due Time"
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnAddDueDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddDue" />
+
+        <TextView
+            android:id="@+id/tvAddDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            android:text="Difficulty"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddDueDate" />
+
+        <RadioGroup
+            android:id="@+id/rbAddDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddDifficulty">
+
+            <RadioButton
+                android:id="@+id/rbAddEasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:background="#00FFFFFF"
+                android:buttonTint="@color/dlsugreen"
+                android:text="Easy"
+                android:textColor="#F6F6F6"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+            <RadioButton
+                android:id="@+id/rbAddMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:buttonTint="@color/dlsugreen"
+                android:text="Medium"
+                android:textColor="#F6F6F6"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+
+            <RadioButton
+                android:id="@+id/rbAddHard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:buttonTint="@color/dlsugreen"
+                android:text="Hard"
+                android:textColor="#F6F6F6"
+                android:textSize="21sp"
+                android:textStyle="italic" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvAddAlarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="#00FFFFFF"
+            android:text="Alarm Day/Time"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rbAddDifficulty" />
+
+        <Button
+            android:id="@+id/btnAddAlarmDate"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Day to Alarm"
+            android:inputType="datetime"
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddAlarm" />
+
+        <Button
+            android:id="@+id/btnAddAlarmTime"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#C6F0BC"
+            android:ems="10"
+            android:hint="Enter Time to Alarm"
+            android:textColor="#000000"
+            android:textColorHint="#646464"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnAddAlarmDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddAlarm" />
+
+        <Button
+            android:id="@+id/btnAddCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="50dp"
+            android:background="#5CB188"
+            android:text="CANCEL"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddAlarmDate" />
+
+        <Button
+            android:id="@+id/btnAddTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="32dp"
+            android:background="#5CB188"
+            android:text="Add Todo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAddAlarmDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

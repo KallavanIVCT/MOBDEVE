@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/todolayoutbackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/tvMainTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:breakStrategy="balanced"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:maxLines="6"
+            android:singleLine="false"
+            android:text="This is project management"
+            android:textColor="@color/lightgreenText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete"
+            app:layout_constraintTop_toBottomOf="@+id/cbStatus" />
+
+        <CheckBox
+            android:id="@+id/cbStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/todolayoutbackground"
+            android:buttonTint="@color/dlsugreen2"
+            android:checked="true"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/dlsugreen"
+            android:textColor="@color/teal_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7">
+
+        <TextView
+            android:id="@+id/tvMainSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxEms="4"
+            android:text="ITPLANN"
+            android:textColor="@color/lightgreen"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMainType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="start|end"
+            android:text="Easy"
+            android:textColor="@color/dlsugreen2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/DifficultyPlace"
+            app:layout_constraintTop_toTopOf="@+id/tvMainSubject" />
+
+        <TextView
+            android:id="@+id/tvMainDifficulty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:gravity="start|end"
+            android:maxEms="9"
+            android:text="Hard"
+            android:textColor="@color/dlsugreen2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/TypePlace"
+            app:layout_constraintTop_toTopOf="@+id/tvMainSubject" />
+
+        <TextView
+            android:id="@+id/tvMainDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:maxEms="15"
+            android:text="EWQEWQEQWRQWTRQWTQ"
+            android:textColor="@color/lightgreenText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainSubject" />
+
+        <TextView
+            android:id="@+id/tvMainDueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="04:01:002024-10-25"
+            android:textColor="@color/dlsugreen2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/DuePlace"
+            app:layout_constraintTop_toTopOf="@+id/DuePlace" />
+
+        <TextView
+            android:id="@+id/tvMainAlarmDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="04:01:002024-10-25"
+            android:textColor="@color/dlsugreen2"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/AlarmPlace"
+            app:layout_constraintTop_toTopOf="@+id/AlarmPlace" />
+
+        <TextView
+            android:id="@+id/AlarmPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Alarm Date:"
+            android:textColor="@color/lightgreenText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMainDescription" />
+
+        <TextView
+            android:id="@+id/DuePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Due Date:"
+            android:textColor="@color/lightgreenText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AlarmPlace" />
+
+        <TextView
+            android:id="@+id/DifficultyPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Type:"
+            android:textColor="@color/lightgreenText"
+            app:layout_constraintStart_toEndOf="@+id/tvMainSubject"
+            app:layout_constraintTop_toTopOf="@+id/tvMainSubject" />
+
+        <TextView
+            android:id="@+id/TypePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Difficulty:"
+            android:textColor="@color/lightgreenText"
+            app:layout_constraintStart_toEndOf="@+id/tvMainType"
+            app:layout_constraintTop_toTopOf="@+id/tvMainSubject" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
